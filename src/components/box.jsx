@@ -1,8 +1,17 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useState } from "react";
 
-const box = ({task, isName}) => {
+const box = () => {
+    const [count, setCount] = useState(0)
+
+    const handleCount = () =>{
+            const newCount = count + 1;
+            setCount(newCount)
+    }
     return (
         <div>
-            <h1>name is {isName ? task : 'name is not available'}</h1>
+            <p>count {count}</p>
+            <button type="button" onClick={handleCount}>count</button>
         </div>
     );
 };
