@@ -2,16 +2,19 @@ import { useEffect } from "react";
 import { useState } from "react";
 const Users = () => {
     const [users, setUser] = useState([]);
+    
   
     useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(json => setUser(json));
+         
     }, []);
   
     return (
       <div className="m-10 p-10">
         <h1>Posts</h1>
+        <h2>{users.length}</h2>
         <ul>
           {users.map(user => (
             <li key={user.id}>
