@@ -3,6 +3,7 @@ import './App.css'
 
 import Box from './components/box'
 import Term from './components/Term'
+import Users from './components/Users'
 
 function App() {
   
@@ -11,6 +12,8 @@ function App() {
     <>
     <Box task={'sadik rahman'} isName={true}></Box>
     <Term></Term>
+
+    <Users></Users>
     </>
   )
 }
