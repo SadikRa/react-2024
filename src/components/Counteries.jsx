@@ -12,9 +12,9 @@ const Countries = () => {
   }, []);
 
   return (
-    <div className="m-10 p-10">
+    <div className="container mx-auto">
       <h1>Countries List</h1>
-      <ul>
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-12 rounded-lg p-6">
         {countries.map((country) => <Country key={country.cca3} country={country}></Country>)}
       </ul>
     </div>
