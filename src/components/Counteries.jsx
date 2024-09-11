@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
+import Country from "./Country";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
@@ -13,13 +15,7 @@ const Countries = () => {
     <div className="m-10 p-10">
       <h1>Countries List</h1>
       <ul>
-        {countries.map((country) => (
-          <li key={country.cca3}> {/* Unique key from country code */}
-            <h2>{country.name.common}</h2>
-            <p>Region: {country.region}</p>
-            <p>Population: {country.population}</p>
-          </li>
-        ))}
+        {countries.map((country) => <Country key={country.cca3} country={country}></Country>)}
       </ul>
     </div>
   );
